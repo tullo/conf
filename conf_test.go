@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ardanlabs/conf"
 	"github.com/google/go-cmp/cmp"
+	"github.com/tullo/conf"
 )
 
 const (
@@ -409,7 +409,7 @@ func TestVersionExplicit(t *testing.T) {
 			args: []string{"--version"},
 			config: ConfExplicit{
 				Version: conf.Version{
-					SVN: "v1.0.0",
+					Version: "v1.0.0",
 				},
 			},
 			wantErr: false,
@@ -420,7 +420,7 @@ func TestVersionExplicit(t *testing.T) {
 			args: []string{"-v"},
 			config: ConfExplicit{
 				Version: conf.Version{
-					SVN: "v1.0.0",
+					Version: "v1.0.0",
 				},
 			},
 			wantErr: false,
@@ -431,8 +431,8 @@ func TestVersionExplicit(t *testing.T) {
 			args: []string{"-version"},
 			config: ConfExplicit{
 				Version: conf.Version{
-					SVN:  "v1.0.0",
-					Desc: "Service Description",
+					Version:     "v1.0.0",
+					Description: "Service Description",
 				},
 			},
 			wantErr: false,
@@ -443,8 +443,8 @@ func TestVersionExplicit(t *testing.T) {
 			args: []string{"-v"},
 			config: ConfExplicit{
 				Version: conf.Version{
-					SVN:  "v1.0.0",
-					Desc: "Service Description",
+					Version:     "v1.0.0",
+					Description: "Service Description",
 				},
 			},
 			wantErr: false,
@@ -455,7 +455,7 @@ func TestVersionExplicit(t *testing.T) {
 			args: []string{"-v"},
 			config: ConfExplicit{
 				Version: conf.Version{
-					Desc: "Service Description",
+					Description: "Service Description",
 				},
 			},
 			wantErr: false,
@@ -513,7 +513,7 @@ func TestVersionImplicit(t *testing.T) {
 			args: []string{"--version"},
 			config: ConfImplicit{
 				Version: conf.Version{
-					SVN: "v1.0.0",
+					Version: "v1.0.0",
 				},
 			},
 			wantErr: false,
@@ -524,7 +524,7 @@ func TestVersionImplicit(t *testing.T) {
 			args: []string{"-v"},
 			config: ConfImplicit{
 				Version: conf.Version{
-					SVN: "v1.0.0",
+					Version: "v1.0.0",
 				},
 			},
 			wantErr: false,
@@ -535,8 +535,8 @@ func TestVersionImplicit(t *testing.T) {
 			args: []string{"-version"},
 			config: ConfImplicit{
 				Version: conf.Version{
-					SVN:  "v1.0.0",
-					Desc: "Service Description",
+					Version:     "v1.0.0",
+					Description: "Service Description",
 				},
 			},
 			wantErr: false,
@@ -547,8 +547,8 @@ func TestVersionImplicit(t *testing.T) {
 			args: []string{"-v"},
 			config: ConfImplicit{
 				Version: conf.Version{
-					SVN:  "v1.0.0",
-					Desc: "Service Description",
+					Version:     "v1.0.0",
+					Description: "Service Description",
 				},
 			},
 			wantErr: false,
@@ -559,7 +559,7 @@ func TestVersionImplicit(t *testing.T) {
 			args: []string{"-v"},
 			config: ConfImplicit{
 				Version: conf.Version{
-					Desc: "Service Description",
+					Description: "Service Description",
 				},
 			},
 			wantErr: false,

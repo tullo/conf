@@ -1,5 +1,5 @@
-module github.com/ardanlabs/conf
+module github.com/tullo/conf
 
-go 1.13
+go 1.15
 
-require github.com/google/go-cmp v0.3.1
+require github.com/google/go-cmp v0.5.2
