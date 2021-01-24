@@ -478,7 +478,7 @@ func TestVersionExplicit(t *testing.T) {
 				f := func(t *testing.T) {
 					if err := conf.Parse(tt.args, "APP", &tt.config); err != nil {
 						if err == conf.ErrVersionWanted {
-							version, err := conf.VersionString("APP", &tt.config)
+							version, err := conf.VersionString(&tt.config)
 							if err != nil && !tt.wantErr {
 								t.Errorf("\t%s\tShould NOT receive an error : %s", failed, err)
 								return
@@ -582,7 +582,7 @@ func TestVersionImplicit(t *testing.T) {
 				f := func(t *testing.T) {
 					if err := conf.Parse(tt.args, "APP", &tt.config); err != nil {
 						if err == conf.ErrVersionWanted {
-							version, err := conf.VersionString("APP", &tt.config)
+							version, err := conf.VersionString(&tt.config)
 							if err != nil && !tt.wantErr {
 								t.Errorf("\t%s\tShould NOT receive an error : %s", failed, err)
 								return
